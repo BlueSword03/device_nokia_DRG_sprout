@@ -48,7 +48,19 @@ else
   fi
 fi
 
-# Initialize the helper
+function blob_fixup() {
+    case "${1}" in
+    vendor/lib64/hw/camera.sdm660.so)
+        patchelf --remove-needed "libMegviiFacepp.so" "${2}"
+        patchelf --remove-needed "libmegface-new.so" "${2}"
+        patchelf --add-needed "libshim_megvii.so" "${2}"
+        ;;
+    esac
+}
+
+extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
+
+# Initialize the helper for device
 setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
