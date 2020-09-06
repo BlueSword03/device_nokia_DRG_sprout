@@ -25,8 +25,6 @@ DEVICE_PATH := device/nokia/DRG_sprout
 TARGET_OTA_ASSERT_DEVICE := DRG_sprout,DRG,Dragon
 BOARD_VENDOR := nokia
 
-
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -100,7 +98,7 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Kernel
-TARGET_KERNEL_CONFIG := nokia_defconfig
+TARGET_KERNEL_CONFIG := enigma_defconfig
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := \
     console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom \
