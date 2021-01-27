@@ -14,9 +14,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_DRG_sprout.mk \
+    $(LOCAL_DIR)/pa_DRG_sprout.mk \
 
 COMMON_LUNCH_CHOICES := \
-    lineage_DRG_sprout-user \
-    lineage_DRG_sprout-userdebug \
-    lineage_DRG_sprout-eng \
+    pa_DRG_sprout-user \
+    pa_DRG_sprout-userdebug \
+    pa_DRG_sprout-eng \
